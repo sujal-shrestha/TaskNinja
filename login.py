@@ -29,7 +29,7 @@ def signin():
        messagebox.showerror("error","invalid username or password")
     else:
         root.destroy()
-        import dashboard
+        import dashboard2
 def registration():
     import tkinter as tk
     base = tk.Tk()
@@ -101,7 +101,6 @@ def registration():
                 entry_02.delete(0,'end')
                 entry_4.delete(0,'end')
                 entry_03.delete(0,'end')
-    
     Button(base, text='Submit',width=20,bg='brown',fg='white',command=submit).place(x=180,y=380)  
     base.mainloop()  
 def forget():

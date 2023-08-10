@@ -26,7 +26,10 @@ def exam():
     import exam
 def das():
     root.destroy()
-    import dashboard
+    import dashboard2
+def user():
+     root.destroy()
+     import setting
 
 def add():
     try:
@@ -83,7 +86,7 @@ def adddone():
                         
                         "done":todo2.get()
                             }
-    insert_query="""INSERT INTO done(  done) VALUES(  %s)""",( vals['done'],)
+    insert_query="""INSERT INTO done(  doing) VALUES(  %s)""",( vals['done'],)
     mycursor.execute(*insert_query)
     con.commit()
     mycursor.close()
@@ -141,15 +144,15 @@ frame=Frame(width=160,padx=30,bg='black')
 frame.pack(side=LEFT,fill=Y)
 dash=Button(text='Dashboard',width=15,height=3,border=1,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=das)
 dash.place(x=1,y=30)
-medicine=Button(text='Daily planner',width=15,height=3,border=1,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=planner)
-medicine.place(x=1,y=100)
-category=Button(text='Calendar',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=cal)
-category.place(x=1,y=170)
-billing=Button(text='Quiz',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=quiz)
-billing.place(x=1,y=240)
-billing=Button(text='Exam',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=exam)
-billing.place(x=1,y=310)
-setting=Button(text='User Setting',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2')
+dailyplanner=Button(text='Daily planner',width=15,height=3,border=1,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2')
+dailyplanner.place(x=1,y=100)
+calendar=Button(text='Calendar',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=cal)
+calendar.place(x=1,y=170)
+quiz2=Button(text='Quiz',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=quiz)
+quiz2.place(x=1,y=240)
+exam2=Button(text='Exam',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=exam)
+exam2.place(x=1,y=310)
+setting=Button(text='User Setting',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=user)
 setting.place(x=1,y=380)
 
 frame1=Frame(root,width=950,height=370,bg="#fafafa")

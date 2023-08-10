@@ -1,0 +1,10 @@
+A = {"salary": 20, "age": 90}
+
+# Sorting by values in ascending order
+sorted_by_values = dict(sorted(A.items(), key=lambda item: item[1]))
+
+# Sorting by keys in descending order
+sorted_by_keys = dict(sorted(sorted_by_values.items(), key=lambda item: item[0], reverse=True))
+
+print("Sorted by values (ascending):", sorted_by_values)
+print("Sorted by keys (descending):", sorted_by_keys)

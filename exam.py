@@ -24,20 +24,25 @@ def quiz():
     import quiz
 def das():
     root.destroy()
-    import dashboard
+    import dashboard2
 def user():
     root.destroy()
     import setting 
     
 def submit():
-    days_in_month=30
+    days_in_month=31
     days_day_num=int(today.strftime("%d"))
     count= Label(root,text=f" Today is: {days_day_num} of the month",font=("Poppins", 15, "bold"))
     count.place(x=630,y=500)
-    day_left = days_in_month-days_day_num+int(days_exam.get())
-    if day_left<31:
-        count1= Label(root,text=f"{day_left} days left for your Examinations",font=("Poppins", 15, "bold"))
-        count1.place(x=600,y=550)
+    if int(days_exam.get())<=32:
+        if int(days_exam.get())<days_day_num:
+            day_left = days_in_month-days_day_num+int(days_exam.get())
+            count1= Label(root,text=f"{day_left} days left for your Examinations",font=("Poppins", 15, "bold"))
+            count1.place(x=600,y=550)
+        else:
+            day_left2 = int(days_exam.get())-days_day_num
+            count1= Label(root,text=f"{day_left2} days left for your Examinations",font=("Poppins", 15, "bold"))
+            count1.place(x=600,y=550)
     else:
         count2= Label(root,text=f"Please enter a valid Date",font=("Poppins", 15, "bold"))
         count2.place(x=630,y=550)
@@ -47,17 +52,17 @@ def submit():
 
 frame=Frame(width=160,padx=30,bg='black')
 frame.pack(side=LEFT,fill=Y)
-dash=Button(text='Dashboard',width=15,height=3,border=1,bg='#FAFAFA',fg='black',font=("Poppins", 12, "bold"),cursor='hand2',command=das)
+dash=Button(text='Dashboard',width=15,height=3,border=1,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=das)
 dash.place(x=1,y=30)
-medicine=Button(text='Daily planner',width=15,height=3,border=1,bg='#FAFAFA',fg='black',font=("Poppins", 12, "bold"),cursor='hand2',command=planner)
-medicine.place(x=1,y=100)
-category=Button(text='Calendar',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Poppins", 12, "bold"),cursor='hand2',command=cal)
-category.place(x=1,y=170)
-billing=Button(text='Quiz',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Poppins", 12, "bold"),cursor='hand2',command=quiz)
-billing.place(x=1,y=240)
-billing=Button(text='Exam',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Poppins", 12, "bold"),cursor='hand2',command=quiz)
-billing.place(x=1,y=310)
-setting=Button(text='User Setting',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Poppins", 12, "bold"),cursor='hand2',command=user)
+dailyplanner=Button(text='Daily planner',width=15,height=3,border=1,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=planner)
+dailyplanner.place(x=1,y=100)
+calendar=Button(text='Calendar',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=cal)
+calendar.place(x=1,y=170)
+quiz2=Button(text='Quiz',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=quiz)
+quiz2.place(x=1,y=240)
+exam2=Button(text='Exam',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2')
+exam2.place(x=1,y=310)
+setting=Button(text='User Setting',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=user)
 setting.place(x=1,y=380)
 
 panic=Label(root,text="DON'T PANIC !",font=("Poppins", 20, "bold"),bg="grey",border=21)

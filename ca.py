@@ -15,7 +15,7 @@ root.state("zoomed")
 
 def das():
     root.destroy()
-    import dashboard
+    import dashboard2
 
 def planner():
     root.destroy()
@@ -35,14 +35,14 @@ frame=Frame(width=160,padx=30,bg='black')
 frame.pack(side=LEFT,fill=Y)
 dash=Button(text='Dashboard',width=15,height=3,border=1,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=das)
 dash.place(x=1,y=30)
-medicine=Button(text='Daily planner',width=15,height=3,border=1,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=planner)
-medicine.place(x=1,y=100)
-category=Button(text='Calendar',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2')
-category.place(x=1,y=170)
-billing=Button(text='Quiz',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=quiz)
-billing.place(x=1,y=240)
-analytic=Button(text='Exam',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=exam)
-analytic.place(x=1,y=310)
+plan=Button(text='Daily planner',width=15,height=3,border=1,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=planner)
+plan.place(x=1,y=100)
+Calendar2=Button(text='Calendar',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2')
+Calendar2.place(x=1,y=170)
+quiz2=Button(text='Quiz',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=quiz)
+quiz2.place(x=1,y=240)
+exam2=Button(text='Exam',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=exam)
+exam2.place(x=1,y=310)
 setting=Button(text='User Setting',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=user)
 setting.place(x=1,y=380)
 

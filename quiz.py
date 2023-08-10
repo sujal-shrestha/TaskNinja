@@ -21,7 +21,7 @@ def cal():
     import ca
 def das():
     root.destroy()
-    import dashboard
+    import dashboard2
 def exam():
     root.destroy()
     import exam
@@ -31,15 +31,15 @@ frame=Frame(width=160,padx=30,bg='black')
 frame.pack(side=LEFT,fill=Y)
 dash=Button(text='Dashboard',width=15,height=3,border=1,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=das)
 dash.place(x=1,y=30)
-planner=Button(text='Daily planner',width=15,height=3,border=1,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=planner)
-planner.place(x=1,y=100)
-calander=Button(text='Calendar',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=cal)
-calander.place(x=1,y=170)
-quiz=Button(text='Quiz',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2')
-quiz.place(x=1,y=240)
-analytic=Button(text='Exam',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=exam)
-analytic.place(x=1,y=310)
-setting=Button(text='User Setting',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2')
+dailyplanner=Button(text='Daily planner',width=15,height=3,border=1,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2')
+dailyplanner.place(x=1,y=100)
+calendar=Button(text='Calendar',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=cal)
+calendar.place(x=1,y=170)
+quiz2=Button(text='Quiz',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2')
+quiz2.place(x=1,y=240)
+exam2=Button(text='Exam',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=exam)
+exam2.place(x=1,y=310)
+setting=Button(text='User Setting',width=15,height=3,border=0,bg='#FAFAFA',fg='black',font=("Inter", 12, "bold"),cursor='hand2',command=user)
 setting.place(x=1,y=380)
 
 questions = ["What is the maximum length of a Python identifier?","What will be the output of the following code snippet? print(2**3 + (5 + 6)**(1 + 1))","How is a code block indicated in Python?","Which of the following statements are used in Exception Handling in Python?","As what datatype are the *args stored, when passed into a function?"]
