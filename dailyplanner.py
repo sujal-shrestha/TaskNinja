@@ -17,7 +17,6 @@ def das():
 def cal():
     root.destroy()
     import ca
-    
 def quiz():
     root.destroy()
     import quiz

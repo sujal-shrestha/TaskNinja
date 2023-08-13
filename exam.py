@@ -30,7 +30,7 @@ def user():
     import setting 
     
 def submit():
-    days_in_month=31
+    days_in_month=32
     days_day_num=int(today.strftime("%d"))
     count= Label(root,text=f" Today is: {days_day_num} of the month",font=("Poppins", 15, "bold"))
     count.place(x=630,y=500)
